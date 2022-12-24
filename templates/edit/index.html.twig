@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des animes{% endblock %}
+
+{% block body %}
+<style>
+    
+</style>
+
+<div class="example-wrapper">
+    <thead>
+            <tr>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for anime in synopsis %}
+                <tr>
+                    <td>
+                        <a href="{{ path('app_edit', {
+                            id: article.id
+                        }) }}">
+                            <button class="btn btn-primary">Edit</button>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+</div>
+{% endblock %}
